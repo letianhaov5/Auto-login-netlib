@@ -12,16 +12,14 @@
 1. fork 此项目
 2. 在Actions菜单允许 `I understand my workflows, go ahead and enable them` 按钮
 
-4. 在 GitHub 仓库的 Settings → Secrets and variables → Actions 中添加以下环境变量
-```
-ACCOUNTS	Netlib账户(必填)，格式(单账号)：用户名:密码    格式(多账号)：用户名1:密码1,用户名2:密码2
+3. 在 GitHub 仓库的 Settings → Secrets and variables → Actions 中添加以下环境变量
+- `ACCOUNTS`  Netlib账户(必填)，格式(单账号)：用户名:密码   格式(多账号)：用户名1:密码1,用户名2:密码2
 
-不需要telegram通知可不配置
-BOT_TOKEN	Telegram机器人Token	  123456:ABC-DEF1234ghIkl-zyx57W2v1u1212Dtr
-CHAT_ID	   Telegram 聊天ID	      123456789
-```
-
-3. GitHub Actions 初始手动执行检查是否有配置错误，脚本会自动每60天执行一次,可手动执行
+- telegra为可选环境变量,不需要通知可不填写
+- `BOT_TOKEN` 	Telegram机器人Token(https://t.me/BotFather)获取
+- `CHAT_ID`     Telegram 聊天ID
+	    
+4. GitHub Actions 初始手动执行检查是否有配置错误，脚本会自动每60天执行一次,可手动执行
 
 ### 注意事项
 1. 确保 Netlib 账户密码正确
